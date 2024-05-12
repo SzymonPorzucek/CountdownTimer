@@ -58,18 +58,12 @@ const checkValidDate = () => {
 	const day = parseInt(eventDayInput.value);
 	const month = parseInt(eventMonthInput.value);
 	const year = parseInt(eventYearInput.value);
-	if (
-		eventDayInput.value &&
-		eventMonthInput.value &&
-		eventYearInput.value.length === 4
-	) {
-		if (isValidDate(day, month, year)) {
-			eventDayInput.value = Math.max(1, Math.min(31, day));
-			eventMonthInput.value = Math.max(1, Math.min(12, month));
-			eventYearInput.value = Math.max(1950, Math.min(2050, year));
-			return true;
-		}
+	if (!isValidDate(day, month, year)) {
+		eventDayInput.value = Math.max(1, Math.min(31, day));
+		eventMonthInput.value = Math.max(1, Math.min(12, month));
 		return false;
+	} else {
+		return true;
 	}
 };
 
@@ -82,7 +76,7 @@ const count = () => {
 	}
 };
 
-[eventDayInput, eventMonthInput, eventYearInput].forEach(input => {
+[eventDayInput, eventMonthInput].forEach(input => {
 	input.addEventListener('input', checkValidDate);
 });
 settingsBtn.addEventListener('click', settingActive);
