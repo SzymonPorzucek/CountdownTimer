@@ -16,7 +16,7 @@
 <body>
 
     <div class="counter-app">
-        <div class="settings active">
+        <div class="settings">
             <h1>Settings</h1>
             <label for="event-name">Event name:</label>
             <input type="text" id="event-name" value="New Year">
@@ -27,14 +27,15 @@
                     <td><label for="event-year">Year:</label></td>
                 </tr>
                 <tr>
-                    <td><input type="number" id="event-day" min="1", max="31" value="1"></td>
-                    <td><input type="number" id="event-month" min="1" max="12" value="1"></td>
-                    <td><input type="number" id="event-year" maxlength="4" value="2025"></td>
+                    <td><input type="number" id="event-day" min="1" , max="31" value="01"></td>
+                    <td><input type="number" id="event-month" min="1" max="12" value="01"></td>
+                    <td><input type="number" id="event-year" value="2025"></td>
                 </tr>
             </table>
             <label for="event-image">Image link:</label>
             <input type="text" id="event-image" value="default.jpg">
             <button class="save">Save</button>
+            <p class="error"></p>
         </div>
 
         <div class="app-body">
@@ -42,10 +43,10 @@
                 <div class="settings-btn"><i class="fas fa-sliders-h"></i></div>
             </div>
             <div class="time-section">
-                <h3><span class="event">New Year</span> in:</h3>
+                <h3><span class="event">New Year</span> starts in:</h3>
                 <div class="time-cards">
 
-                    <div class="card">
+                    <div class="card card-day">
                         <p class="days-count number">1</p>
                         <p class="card-title">Days</p>
                     </div>

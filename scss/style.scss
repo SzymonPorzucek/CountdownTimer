@@ -25,7 +25,7 @@ body {
 	.image-section {
 		position: relative;
 		height: 400px;
-		background-image: url('../img/default.jpg.jpg');
+		background-image: url('../img/default.jpg');
 		background-size: cover;
 		background-position: center;
 	}
@@ -70,6 +70,9 @@ body {
 				border: 1px solid black;
 				border-radius: 8px;
 			}
+			.card-day {
+				min-width: max-content;
+			}
 			.number {
 				margin-bottom: 20px;
 				font-weight: bold;
@@ -106,13 +109,24 @@ body {
 	input {
 		margin-bottom: 30px;
 		padding: 10px 20px;
-        width: 100%;
-        text-align: center;
-	}.date{
-        text-align: center;
-    }.save{
-        padding: 10px 20px;cursor: pointer;
-    }
+		width: 100%;
+		text-align: center;
+	}
+	.date {
+		text-align: center;
+	}
+	.save {
+		padding: 10px 20px;
+		cursor: pointer;
+		border-radius: 5px;
+	}
+	.error {
+		display: block;
+		margin-top: 20px;
+		color: red;
+		font-size: 18px;
+		height: 20px;
+	}
 }
 .active {
 	transform: translateX(430px);

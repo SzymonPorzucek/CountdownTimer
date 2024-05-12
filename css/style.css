@@ -29,7 +29,7 @@ body {
 .app-body .image-section {
   position: relative;
   height: 400px;
-  background-image: url("../img/default.jpg.jpg");
+  background-image: url("../img/default.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -76,6 +76,10 @@ body {
   border: 1px solid black;
   border-radius: 8px;
 }
+.app-body .time-section .time-cards .card-day {
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
 .app-body .time-section .time-cards .number {
   margin-bottom: 20px;
   font-weight: bold;
@@ -120,6 +124,14 @@ body {
 .settings .save {
   padding: 10px 20px;
   cursor: pointer;
+  border-radius: 5px;
+}
+.settings .error {
+  display: block;
+  margin-top: 20px;
+  color: red;
+  font-size: 18px;
+  height: 20px;
 }
 
 .active {
